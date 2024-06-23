@@ -3,7 +3,125 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="👀: a FILM!" bgColor="bg-lightgrey">
-	<main>
-    <h1 class="font-bold">find film information on this page</h1>
+	<main class="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div class="snap-start px-10 pt-6 mb-14 w-fit">
+      <a class="px-4 py-2 font-bold border-2 border-black text-black hover:text-white hover:bg-black"
+         href="/">
+        BACK TO MOVIE LIST
+      </a>
+    </div>
+
+    <section class="snap-always snap-start px-10 pb-16 grid grid-cols-12 gap-6">
+      <div class="flex flex-col col-span-5 gap-6">
+        <h1>Good Will Hunting</h1>
+        <h5 class="font-palatino">1977 / Drama / 2H 7M</h5>
+      </div>
+
+      <div class="flex flex-col col-start-7 col-span-5 gap-6">
+        <p class="mt-8 text-yellow">SOME PEOPLE CAN NEVER BELIEVE IN THEMSELVES, UNTIL SOMEONE BELIEVES IN THEM.</p>
+        <p>Will Hunting has a genius-level IQ but chooses to work as a janitor at MIT. When he solves a difficult graduate-level math problem, his talents are discovered by Professor Gerald Lambeau, who decides to help the misguided youth reach his potential. When Will is arrested for attacking a police officer, Professor Lambeau makes a deal to get leniency for him if he will get treatment from therapist Sean Maguire.</p>
+        <h4 class="mt-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+      </div>
+    </section>
+
+    <section class="snap-always snap-start px-10 pt-16 pb-32">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-5 flex flex-col gap-16">
+          <img src="/public/stills/goodwillhunting005.jpg" />
+          <div class="grid grid-cols-5 gap-6">
+            <div class="col-span-4">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus mauris ultrices eros in cursus turpis massa. In nulla posuere sollicitudin aliquam ultrices. Faucibus purus in massa tempor. Id leo in vitae turpis massa sed. Posuere lorem ipsum dolor sit. Neque gravida in fermentum et sollicitudin ac orci. Ut eu sem integer vitae justo. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Amet massa vitae tortor condimentum. Erat nam at lectus urna. Blandit libero volutpat sed cras ornare. Adipiscing elit ut aliquam purus sit. Sit amet tellus cras adipiscing enim. Viverra vitae congue eu consequat ac. Et odio pellentesque diam volutpat commodo. Etiam erat velit scelerisque in dictum non. Convallis a cras semper auctor neque vitae tempus. Elit sed vulputate mi sit amet mauris commodo quis. Placerat vestibulum lectus mauris ultrices eros. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci. Ultrices in iaculis nunc sed augue lacus. Urna id volutpat lacus laoreet non curabitur. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Pharetra convallis posuere morbi leo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-start-7 col-span-6 flex flex-col justify-between">
+          <div class="grid grid-cols-6 gap-6">
+            <div class="col-span-6 flex flex-col gap-6">
+              <img src="/public/stills/goodwillhunting052.jpg" />
+              <div class="col-span-5">
+                <p class="italic">
+                  Look, you're my best friend, so don't take this the wrong way but, in 20 years if you're still livin' here, comin' over to my house, watchin' the Patriots games, workin' construction, I'll fuckin' kill ya. That's not a threat, that's a fact, I'll fuckin' kill ya.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 grid grid-cols-6 gap-6">
+            <div class="col-start-3 col-span-4">
+              <img src="/public/stills/goodwillhunting040.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="snap-always snap-start bg-darkgrey px-10 pb-8 flex flex-col">
+      <div class="py-16 grid grid-cols-12 gap-6">
+        <div class="col-start-4 col-span-6 flex flex-col gap-14">
+          <h3>Cast</h3>
+          <div class="flex flex-col gap-8">
+            <!-- first row -->
+            <div class="grid grid-cols-3">
+              <div class="col-span-1 flex flex-col gap-2">
+                <p>Matt Damon</p>
+                <p class="text-yellow">Will Hunting</p>
+              </div>
+              <div class="col-span-1 flex flex-col gap-2">
+                <p>Robin Williams</p>
+                <p class="text-yellow">Sean Maguire</p>
+              </div>
+              <div class="col-span-1 flex flex-col gap-2">
+                <p>Ben Affleck</p>
+                <p class="text-yellow">Chuckie Sullivan</p>
+              </div>
+            </div>
+            <!-- second row -->
+            <div class="grid grid-cols-3">
+              <div class="col-span-1 flex flex-col gap-2">
+                <p>Stellan Skarsgård</p>
+                <p class="text-yellow">Gerald Lambeau</p>
+              </div>
+              <div class="col-span-1 flex flex-col gap-2">
+                <p>Minnie Driver</p>
+                <p class="text-yellow">Skylar</p>
+              </div>
+            </div>
+            <!-- director row -->
+            <div class="mt-8 grid grid-cols-3">
+              <div class="col-span-1 flex flex-col gap-2">
+                <p>Gus Van Sant</p>
+                <p class="text-yellow">Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row justify-between">
+        <p>Good Will Hunting</p>
+        <p>1977</p>
+      </div>
+    </section>
+
+    <section class="snap-end flex flex-row">
+      <div class="bg-black px-20 pt-16 pb-24 basis-1/3">
+        <img src="/public/posters/goodwillhunting_1977.jpg">
+      </div>
+      <div class="bg-yellow px-6 pt-16 pb-24 basis-2/3 flex flex-col gap-8 justify-between text-white">
+        <div class="ml-8 grid grid-cols-8 gap-6">
+          <div class="col-span-6">
+            <h2 class="font-palatino">GOOD WILL HUNTING</h2>
+          </div>
+        </div>
+        <div class="ml-8 flex flex-col gap-8 w-fit">
+          <h3>4.5 ★</h3>
+          <a class="px-20 py-14 font-bold border-2 border-white text-white hover:text-yellow hover:bg-white"
+             href="https://letterboxd.com">
+            READ REVIEWS ON LETTERBOXD
+          </a>
+        </div>
+      </div>
+    </section>
+
 	</main>
 </Layout>

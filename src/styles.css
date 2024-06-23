@@ -1,12 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: Palatino;
+    src: local('Palatino'), url(/public/fonts/palatino.ttf) format("ttf");
+  }
+
   html {
+    /* font-size: 16px; */
     @apply text-black;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-family: 'palatino';
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+    font-family: 'palatino';
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-family: 'palatino';
+  }
+
+  h4 {
+    font-size: 2rem;
+    font-family: 'palatino';
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 1rem;
   }
 }

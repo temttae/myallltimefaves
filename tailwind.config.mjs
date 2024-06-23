@@ -11,7 +11,7 @@ export default {
     },
     fontFamily: {
       sans: ['Proza Libre', 'sans-serif'],
-      serif: ['Spectral', 'serif'],
+      palatino: ['Palatino', 'serif'],
     },
 		extend: {},
 	},
