@@ -23,7 +23,7 @@ def scrape_film(link):
     directorlist.append(director.text)
 
   # details
-  runtime = soup.find('p', class_='text-link text-footer').text.strip().split(' ')[0][:-5] # in minutes
+  runtime = int(soup.find('p', class_='text-link text-footer').text.strip().split(' ')[0][:-5]) # in minutes
 
   genrelist = []
   genres = soup.find('div', id='tab-genres').find('div').find_all('a')
@@ -58,14 +58,31 @@ def scrape_film(link):
 
   return df
 
-
 # scrape data from films
-df = pd.DataFrame(columns=['link', 'title', 'year', 'directorlist', 'runtime', 'genrelist', 'castlist', 'tagline', 'summary', 'rating'])
+links = ['good-will-hunting', 'john-wick']
 
-links = ['good-will-hunting']
+# one json file per film
+import os
 
 for link in links:
-  row = scrape_film(link)
-  df = pd.concat([df, row], ignore_index=True)
+  df = scrape_film(link)
 
-df.to_json('./data.json', orient='records', indent=4)
+  directory = './src/content/films'
+  if not os.path.exists(directory):
+    os.makedirs(directory)
+
+  filename = link + '.json'
+  path = directory + '/' + filename
+
+  df.to_json(path, orient='records', indent=4)
+  del df
+
+
+# # combine all films into one dataframe -> one json file
+# df = pd.DataFrame(columns=['link', 'title', 'year', 'directorlist', 'runtime', 'genrelist', 'castlist', 'tagline', 'summary', 'rating'])
+
+# for link in links:
+#   row = scrape_film(link)
+#   df = pd.concat([df, row], ignore_index=True)
+
+# df.to_json('./data.json', orient='records', indent=4)

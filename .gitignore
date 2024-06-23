@@ -25,6 +25,7 @@ pnpm-debug.log*
 
 # scraped data
 letterboxd_scraping/data.json
+src/content/films/
 
 # fonts & images
 public/fonts/
