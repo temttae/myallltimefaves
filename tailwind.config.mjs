@@ -7,7 +7,6 @@ export default {
       'black': '#252525',
       'lightgrey': '#e8e7e6',
       'darkgrey': '#d9d9d9',
-      'yellow': '#e0a800',
     },
     fontFamily: {
       sans: ['Proza Libre', 'sans-serif'],

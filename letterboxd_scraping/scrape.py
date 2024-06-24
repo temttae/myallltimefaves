@@ -52,8 +52,8 @@ def scrape_film(link):
     rating -= 0.5
   
   # print(film, title, year, directorlist, runtime, genrelist, castlist, tagline, summary, rating)
-  data = {'link': link, 'title': title, 'year': year, 'directorlist': directorlist, 'runtime': runtime, 
-          'genrelist': genrelist, 'castlist': castlist, 'tagline': tagline, 'summary': summary, 'rating': rating}
+  data = {'link': link, 'title': title, 'year': year, 'directorlist': directorlist, 'runtime': runtime, 'genrelist': genrelist, 
+          'castlist': castlist, 'tagline': tagline, 'summary': summary, 'rating': rating, 'ratingstars': ratingstars}
   df = pd.DataFrame([data])
 
   return df
@@ -67,7 +67,7 @@ import os
 for link in links:
   df = scrape_film(link)
 
-  directory = './src/content/films'
+  directory = './src/content/film'
   if not os.path.exists(directory):
     os.makedirs(directory)
 
